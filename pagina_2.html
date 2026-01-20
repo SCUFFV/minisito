@@ -12,26 +12,17 @@
   function toggleAudio() {
     if (audio.paused) {
       audio.play();
+      button.textContent = "⏸ Pausa";
     } else {
       audio.pause();
+      button.textContent = "▶ Ascolta la descrizione";
     }
   }
 
-  // quando parte
-  audio.addEventListener("play", function () {
-    button.textContent = "⏸ Pausa";
-  });
-
-  // quando viene messo in pausa manualmente
-  audio.addEventListener("pause", function () {
-    if (audio.currentTime < audio.duration) {
-      button.textContent = "▶ Ascolta la descrizione";
-    }
-  });
-
-  // quando FINISCE davvero
+  // RESET quando l'audio finisce
   audio.addEventListener("ended", function () {
-    audio.currentTime = 0;
+    audio.pause();           // forza lo stato fermo
+    audio.currentTime = 0;   // torna all'inizio
     button.textContent = "▶ Ascolta la descrizione";
   });
 </script>
@@ -69,6 +60,7 @@
 
 </body>
 </html>
+
 
 
 
