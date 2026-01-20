@@ -3,29 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <title>Oggetto 1</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/stile.css">
 </head>
 <body>
 
 <div class="container">
 
-  <h1>Oggetto 1</h1>
-
-  <img src="immagini/placeholder.jpg" alt="Oggetto esposto" class="immagine">
-
-  <p class="descrizione">
-    <!-- Testo descrittivo da inserire -->
-  </p>
+  <h1 class="centrato">Oggetto 1</h1>
+  <p class="centrato sottotitolo">Descrizione storica</p>
 
   <button class="play-btn" onclick="document.getElementById('audio1').play()">
     ▶ Ascolta la descrizione
   </button>
 
-  <p class="nota">🔊 Regola il volume dai tasti del telefono</p>
+  <p class="nota centrato">🔊 Regola il volume dai tasti del telefono</p>
 
   <audio id="audio1">
-    <source src="audio/prova2.mp3" type="audio/mpeg">
+    <source src="audio/oggetto1.mp3" type="audio/mpeg">
   </audio>
+
+  <p class="testo">
+    Testo
+  </p>
+
+  <img src="immagini/placeholder.jpg" alt="Oggetto esposto" class="immagine">
 
   <div class="nav">
     <a href="index.html">← Indice</a>
@@ -36,4 +37,5 @@
 
 </body>
 </html>
+
 
