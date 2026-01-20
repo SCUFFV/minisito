@@ -7,35 +7,27 @@
 </head>
 
 <script>
-  const audio = document.getElementById("audio1");
-  const button = document.querySelector(".play-btn");
-
   function toggleAudio() {
-    if (audio.paused) {
+    const audio = document.getElementById("audio1");
+    const button = document.querySelector(".play-btn");
+
+    if (audio.paused || audio.ended) {
+      audio.currentTime = 0;
       audio.play();
+      button.textContent = "⏸ Pausa";
     } else {
       audio.pause();
+      button.textContent = "▶ Ascolta la descrizione";
     }
   }
 
-  // quando parte
-  audio.addEventListener("play", function () {
-    button.textContent = "⏸ Pausa";
-  });
-
-  // quando viene messo in pausa manualmente
-  audio.addEventListener("pause", function () {
-    if (audio.currentTime < audio.duration) {
-      button.textContent = "▶ Ascolta la descrizione";
-    }
-  });
-
-  // quando FINISCE davvero
-  audio.addEventListener("ended", function () {
-    audio.currentTime = 0;
+  // quando l'audio finisce davvero
+  document.getElementById("audio1").addEventListener("ended", function () {
+    const button = document.querySelector(".play-btn");
     button.textContent = "▶ Ascolta la descrizione";
   });
 </script>
+
   
   <body>
 
@@ -69,6 +61,7 @@
 
 </body>
 </html>
+
 
 
 
