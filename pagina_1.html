@@ -7,12 +7,11 @@
 </head>
 
 <script>
-  function toggleAudio() {
-    const audio = document.getElementById("audio1");
-    const button = document.querySelector(".play-btn");
+  const audio = document.getElementById("audio1");
+  const button = document.querySelector(".play-btn");
 
-    if (audio.paused || audio.ended) {
-      audio.currentTime = 0;
+  function toggleAudio() {
+    if (audio.paused) {
       audio.play();
       button.textContent = "⏸ Pausa";
     } else {
@@ -21,12 +20,14 @@
     }
   }
 
-  // quando l'audio finisce davvero
-  document.getElementById("audio1").addEventListener("ended", function () {
-    const button = document.querySelector(".play-btn");
+  // RESET quando l'audio finisce
+  audio.addEventListener("ended", function () {
+    audio.pause();           // forza lo stato fermo
+    audio.currentTime = 0;   // torna all'inizio
     button.textContent = "▶ Ascolta la descrizione";
   });
 </script>
+
 
   
   <body>
@@ -61,6 +62,7 @@
 
 </body>
 </html>
+
 
 
 
