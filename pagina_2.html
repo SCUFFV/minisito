@@ -1,34 +1,38 @@
 <!DOCTYPE html>
 <html lang="it">
-
 <head>
   <meta charset="UTF-8">
-  <title>Pagina 02</title>
+  <title>Oggetto 2</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
 
-<h2>Pagina 02</h2>
+<div class="container">
 
-<p>
-[QUI CI ANDRÀ IL TESTO]
-</p>
+  <h1>Oggetto 2</h1>
 
-<audio controls>
+  <img src="immagini/placeholder.jpg" alt="Oggetto esposto" class="immagine">
+
+  <p class="descrizione">
+    <!-- Testo descrittivo da inserire -->
+  </p>
+
+  <button class="play-btn" onclick="document.getElementById('audio1').play()">
+    ▶ Ascolta la descrizione
+  </button>
+
+  <p class="nota">🔊 Regola il volume dai tasti del telefono</p>
+
+ <audio id="audio1">
   <source src="audio/prova2.mp3" type="audio/mpeg">
-  Il tuo browser non supporta l'audio.
 </audio>
 
-<p>
-[QUI CI ANDRÀ L'IMMAGINE]
-</p>
+  <div class="nav">
+    <a href="pagina_1.html">← Indietro</a>
+    <a href="index.html">Indice </a>
+  </div>
 
-<div class="nav">
-  <a href="pagina_1.html">◀ Indietro</a>
-  <a href="index.html">Indice</a>
 </div>
 
 </body>
-
 </html>
