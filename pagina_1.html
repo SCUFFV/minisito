@@ -5,16 +5,39 @@
   <title>Oggetto 1</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+
+  <script>
+  function toggleAudio() {
+    const audio = document.getElementById("audio1");
+    const button = document.querySelector(".play-btn");
+
+    if (audio.paused) {
+      audio.play();
+      button.textContent = "⏸ Pausa";
+    } else {
+      audio.pause();
+      button.textContent = "▶ Ascolta la descrizione";
+    }
+  }
+
+  // quando l'audio finisce, torna play
+  document.getElementById("audio1").addEventListener("ended", function () {
+    const button = document.querySelector(".play-btn");
+    button.textContent = "▶ Ascolta la descrizione";
+  });
+</script>
+
+  
+  <body>
 
 <div class="container">
 
   <h1 class="centrato">Oggetto 1</h1>
   <p class="centrato sottotitolo">Descrizione storica</p>
 
-  <button class="play-btn" onclick="document.getElementById('audio1').play()">
-    ▶ Ascolta la descrizione
-  </button>
+  <button class="play-btn" onclick="toggleAudio()">
+  ▶ Ascolta la descrizione
+</button>
 
   <p class="nota centrato">🔊 Regola il volume dai tasti del telefono</p>
 
@@ -37,6 +60,7 @@
 
 </body>
 </html>
+
 
 
 
