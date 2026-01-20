@@ -6,10 +6,10 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <script>
-  const audio = document.getElementById("audio1");
-  const button = document.querySelector(".play-btn");
-
   function toggleAudio() {
+    const audio = document.getElementById("audio1");
+    const button = document.querySelector(".play-btn");
+
     if (audio.paused) {
       audio.play();
       button.textContent = "⏸ Pausa";
@@ -19,13 +19,13 @@
     }
   }
 
-  // RESET quando l'audio finisce
-  audio.addEventListener("ended", function () {
-    audio.pause();           // forza lo stato fermo
-    audio.currentTime = 0;   // torna all'inizio
+  // quando l'audio finisce, torna play
+  document.getElementById("audio1").addEventListener("ended", function () {
+    const button = document.querySelector(".play-btn");
     button.textContent = "▶ Ascolta la descrizione";
   });
 </script>
+
 
 
 <body>
@@ -60,6 +60,7 @@
 
 </body>
 </html>
+
 
 
 
