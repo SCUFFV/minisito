@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #f5f5f5;
+  background: #f4f4f4;
   color: #0B1C2D;
 }
 
@@ -12,33 +12,33 @@ body {
   background: white;
 }
 
+.centrato {
+  text-align: center;
+}
+
 h1 {
   font-size: 22px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
-p {
-  font-size: 16px;
+.sottotitolo {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 20px;
 }
 
-.indice {
-  list-style: none;
-  padding: 0;
+.indice-centrato {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
 }
 
-.indice li {
-  margin: 10px 0;
-}
-
-.indice a {
+.indice-centrato a {
   text-decoration: none;
-  color: #0B1C2D;
   font-weight: bold;
-}
-
-.immagine {
-  width: 100%;
-  margin: 15px 0;
+  color: #0B1C2D;
+  font-size: 18px;
 }
 
 .play-btn {
@@ -49,6 +49,7 @@ p {
   background: white;
   color: #0B1C2D;
   cursor: pointer;
+  margin-bottom: 10px;
 }
 
 .play-btn:active {
@@ -58,18 +59,30 @@ p {
 
 .nota {
   font-size: 13px;
-  color: #555;
-  margin-top: 6px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.testo {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.immagine {
+  width: 100%;
+  margin-bottom: 20px;
 }
 
 .nav {
   display: flex;
   justify-content: space-between;
-  margin-top: 25px;
 }
 
 .nav a {
   text-decoration: none;
-  color: #0B1C2D;
   font-weight: bold;
+  color: #0B1C2D;
 }
+
+
