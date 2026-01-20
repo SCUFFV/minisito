@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 
-  <script>
+ <script>
   function toggleAudio() {
     const audio = document.getElementById("audio1");
     const button = document.querySelector(".play-btn");
@@ -20,13 +20,12 @@
     }
   }
 
-  // quando l'audio finisce, torna play
+  // quando l'audio finisce, reset automatico
   document.getElementById("audio1").addEventListener("ended", function () {
     const button = document.querySelector(".play-btn");
     button.textContent = "▶ Ascolta la descrizione";
   });
 </script>
-
   
   <body>
 
@@ -60,6 +59,7 @@
 
 </body>
 </html>
+
 
 
 
