@@ -19,13 +19,12 @@
     }
   }
 
-  // quando l'audio finisce, torna play
+  // quando l'audio finisce, reset automatico
   document.getElementById("audio1").addEventListener("ended", function () {
     const button = document.querySelector(".play-btn");
     button.textContent = "▶ Ascolta la descrizione";
   });
-</script>
-  
+</script> 
 <body>
 
 <div class="container">
@@ -58,6 +57,7 @@
 
 </body>
 </html>
+
 
 
 
