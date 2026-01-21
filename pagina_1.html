@@ -5,30 +5,6 @@
   <title>Oggetto 1</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
-
-<script>
-  function toggleAudio() {
-    const audio = document.getElementById("audio1");
-    const button = document.querySelector(".play-btn");
-
-    if (audio.paused) {
-      audio.play();
-      button.textContent = "⏸ Pausa";
-    } else {
-      audio.pause();
-      button.textContent = "▶ Ascolta la descrizione";
-    }
-  }
-
-  // quando l'audio finisce, torna play
-  document.getElementById("audio1").addEventListener("ended", function () {
-    const button = document.querySelector(".play-btn");
-    button.textContent = "▶ Ascolta la descrizione";
-  });
-</script>
-
-
-
   
   <body>
 
@@ -57,11 +33,42 @@
     <a href="index.html">← Indice</a>
     <a href="pagina_2.html">Avanti →</a>
   </div>
-
 </div>
+
+      <script>
+  const audio = document.getElementById("audio1");
+  const button = document.querySelector(".play-btn");
+
+  function toggleAudio() {
+    if (audio.paused) {
+      audio.play();
+    } else {
+      audio.pause();
+    }
+  }
+
+  // quando parte
+  audio.addEventListener("play", () => {
+    button.textContent = "⏸ Pausa";
+  });
+
+  // quando viene messo in pausa (ma NON a fine audio)
+  audio.addEventListener("pause", () => {
+    if (audio.currentTime < audio.duration) {
+      button.textContent = "▶ Ascolta la descrizione";
+    }
+  });
+
+  // quando FINISCE davvero
+  audio.addEventListener("ended", () => {
+    audio.currentTime = 0;
+    button.textContent = "▶ Ascolta la descrizione";
+  });
+</script>
 
 </body>
 </html>
+
 
 
 
