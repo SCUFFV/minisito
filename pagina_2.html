@@ -5,7 +5,36 @@
   <title>Oggetto 2</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
-<script>
+<body>
+
+<div class="container">
+
+  <h1 class="centrato">Oggetto 2</h1>
+  <p class="centrato sottotitolo">Descrizione storica</p>
+
+  <button class="play-btn" onclick="toggleAudio()">
+  ▶ Ascolta la descrizione
+</button>
+
+  <p class="nota centrato">🔊 Regola il volume dai tasti del telefono</p>
+
+  <audio id="audio1">
+    <source src="audio/prova2.mp3" type="audio/mpeg">
+  </audio>
+
+  <p class="testo">
+    Testo
+  </p>
+
+  <img src="immagini/placeholder.jpg" alt="Oggetto esposto" class="immagine">
+
+  <div class="nav">
+    <a href="pagina_1.html">← Indietro</a>
+    <a href="index.html">indice</a>
+  </div>
+</div>
+
+  <script>
   const audio = document.getElementById("audio1");
   const button = document.querySelector(".play-btn");
 
@@ -37,39 +66,9 @@
 </script>
 
 
-
-<body>
-
-<div class="container">
-
-  <h1 class="centrato">Oggetto 2</h1>
-  <p class="centrato sottotitolo">Descrizione storica</p>
-
-  <button class="play-btn" onclick="toggleAudio()">
-  ▶ Ascolta la descrizione
-</button>
-
-  <p class="nota centrato">🔊 Regola il volume dai tasti del telefono</p>
-
-  <audio id="audio1">
-    <source src="audio/prova2.mp3" type="audio/mpeg">
-  </audio>
-
-  <p class="testo">
-    Testo
-  </p>
-
-  <img src="immagini/placeholder.jpg" alt="Oggetto esposto" class="immagine">
-
-  <div class="nav">
-    <a href="pagina_1.html">← Indietro</a>
-    <a href="index.html">indice</a>
-  </div>
-
-</div>
-
 </body>
 </html>
+
 
 
 
